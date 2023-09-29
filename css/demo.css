@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.demo_flex {
+  background-color: black;
+  /* đơn vị đo mới : vh (view-height), vw (view-width) */
+  height: 100vh;
+  /* lưu ý khi sử dụng vw : khi ở một số trình duyệt, dùng 100vw sẽ chưa bao gồm thanh cuộn bên tay phải, nên sẽ có đôi lúc có thanh scroll ngang */
+  width: 100vw;
+  /* flex-box  */
+  /* sử dụng display : flex để đưa các phần tử lên cùng một dòng  */
+  /* justify-content nhận vào một số giá trị :  */
+  /* center sẽ đưa các phần tử nằm giữa  */
+  /* space-between đưa phần tử đầu nằm về phía bên trái và phần tử cuối nằm về tay phải  */
+
+  /* align-items điều chỉnh flex theo chiều dọc  */
+  /* có một số giá trị center đưa các phần tử nằm giữa theo chiều dọc,flex-end đưa các phần tử nằm xuống cuối theo chiều dọc   */
+
+  display: flex;
+  /* justify-content là thuộc tính giúp điều chỉnh các phần tử dựa trên trục chính, mặc định sẽ là trục ngang, cần chú ý hướng của trục khi sử dụng flex-direction  */
+  justify-content: center;
+  align-items: center;
+  /* flex-direction giúp đảo chiều trục của flex  */
+  /* trục mặc định sẽ là trục ngang đi từ trái qua phải  */
+  /* giá trị row-reverse sẽ giúp đảo ngược chiều trục ngang đi từ phải qua trái  */
+  flex-direction: column;
+}
+
+.flex_item {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 15px;
+  font-size: 25px;
+  color: white;
+}
+
+/* before  */
+/* before là một thẻ ảo từ css giúp truyền một nội dung lên trước nội dung mà thẻ đó đang chứa  */
+p {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  position: relative;
+}
+
+.demo_before_after p::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  right: 0;
+}
+
+/* after  */
+/* after sẽ giống before nhưng sẽ đưa nội dung nằm sau nội dung thẻ  */
+.demo_before_after p::after {
+  content: 'Đi học';
+}
+.demo_transform{
+  height: 50vh;
+  background-color: brown;
+}
+.demo_3{
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  transform: translate(100px, 300px);
+
+}
